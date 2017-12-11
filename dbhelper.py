@@ -8,7 +8,7 @@ class DBHelper:
                            user=dbconfig.db_user,
                            passwd=dbconfig.db_password,
                            db=database)
-
+  
   def add_crime(self,category,date,latitude,longitude,description):
      connection=self.connect()
      try:
@@ -21,6 +21,7 @@ class DBHelper:
        print(e)
      finally:
        connection.close()
+       ''' llll '''
 
   def get_all_crimes(self):
     connection = self.connect()
